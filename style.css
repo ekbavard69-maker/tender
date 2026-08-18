@@ -375,3 +375,65 @@ html{scroll-padding-top:74px}
   .hero-face{flex:0 0 130px;order:-1}
   .hero-face figcaption{font-size:13px}
 }
+
+
+/* ---------- Контакты в шапке ---------- */
+.top-contacts{margin-left:auto;text-align:right;line-height:1.35}
+.top-contacts .t-tel{
+  font-family:var(--mono);font-size:16px;font-weight:500;
+  text-decoration:none;display:block;white-space:nowrap;
+}
+.top-contacts .t-mail{
+  font-family:var(--mono);font-size:13px;
+  text-decoration:none;display:block;color:var(--ink-soft);white-space:nowrap;
+}
+.top-contacts .t-mail:hover,.top-contacts .t-tel:hover{color:var(--stamp)}
+.top-msgr{
+  display:flex;gap:9px;justify-content:flex-end;margin-top:5px;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
+}
+.top-msgr a{
+  text-decoration:none;color:var(--grey);
+  display:inline-flex;align-items:center;gap:4px;
+}
+.top-msgr a:hover{color:var(--ink)}
+.top-msgr .d{width:6px;height:6px;border-radius:50%;flex:0 0 6px}
+.top-msgr a[data-m="tg"]  .d{background:#2AA0DA}
+.top-msgr a[data-m="max"] .d{background:#5B2FEB}
+.top-msgr a[data-m="bip"] .d{background:#E8641E}
+.top-msgr a[data-m="wa"]  .d{background:#25AE60}
+@media (max-width:700px){
+  .top-contacts{width:100%;text-align:left;margin-left:0;margin-top:8px}
+  .top-msgr{justify-content:flex-start}
+}
+
+
+/* Разделение пунктов без зависимости от поддержки flex-gap */
+.nav{gap:0}
+.nav a + a{margin-left:22px}
+.top-msgr{gap:0}
+.top-msgr a + a{margin-left:11px}
+.msgr{gap:0;margin-left:-10px}
+.msgr a{margin:0 0 10px 10px}
+
+
+/* ---------- Лента опыта ---------- */
+.creds{
+  display:flex;flex-wrap:wrap;
+  border-top:1px solid var(--rule);
+  margin-top:30px;padding-top:22px;
+}
+.creds div{flex:1 1 190px;padding-right:26px;margin-bottom:10px}
+.creds b{
+  display:block;font-family:var(--display);font-weight:700;
+  font-size:clamp(24px,3vw,32px);line-height:1.05;color:var(--ink);
+  letter-spacing:-.01em;
+}
+.creds span{
+  display:block;font-size:14px;line-height:1.4;color:var(--ink-soft);margin-top:6px;
+}
+@media (max-width:640px){
+  .creds div{flex:1 1 46%;padding-right:14px}
+  .creds b{font-size:23px}
+  .creds span{font-size:13px}
+}
